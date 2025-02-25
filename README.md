@@ -1,60 +1,64 @@
 ![Alt Text](https://billor.us/images/logo.svg)
 
-# Billor Coding Challenge: Support and Monitoring Center Web App
+# Billor Coding Challenge: Driver Mobile App
 
 ## Objective
 
-Develop a web application that functions as a support and monitoring center. The app should allow you to manage client data and enable real-time chat communication, as well as display the current location of clients who are drivers on a map. Additionally, the app should differentiate between "driver clients" and other types of clients.
+Develop a mobile application using React Native that functions as driver app. The app should enable user authentication, display and manage loads, capture and send document images, facilitate real-time chat communication, and provide push notifications, while also allowing users to manage their profile.
 
 ## Functional Requirements
 
-1. **Client CRUD Operations:**
-   - Implement Create, Read, Update, and Delete (CRUD) operations for clients.
-   - Each client should have basic information (name, email, phone, etc.). For driver clients, include additional details such as their current location (latitude/longitude).
+1. **User Authentication:**
+   - Implement a login screen with form validation.
+   - Integrate with an authentication API (e.g., Firebase Auth or a custom API).
 
-2. **Client Segmentation:**
-   - Allow differentiation between driver clients and other types of clients.
-   - Visually display this distinction in the user interface (e.g., using icons, colors, or filters).
+2. **Loads Management:**
+   - Display a list of loads with filtering and search capabilities.
+   - Provide a detailed view for each load, including additional information, map and relevant actions.
 
-3. **Integrated Chat:**
-   - Develop a real-time chat system inspired by tools like Chatwoot.
-   - The chat should facilitate communication between support agents and clients.
-   - Maintain a conversation history to allow viewing and continuation of past chats.
+3. **Documents Integration:**
+   - Use the device camera to capture and submit document images associated with loads.
 
-4. **Location Mapping:**
-   - Integrate a map (using APIs like Google Maps or Mapbox) to display the current location of drivers.
-   - When selecting a driver client, display their current position on the map.
+4. **Real-Time Chat:**
+   - Develop a real-time messaging system for communication between support agents and users.
+   - Maintain a conversation history for ongoing chats.
+
+5. **Push Notifications:**
+   - Integrate push notifications (e.g., via Firebase Cloud Messaging) to alert users about important updates.
+   - Handle notifications appropriately when the app is active, in the background, or closed.
+
+6. **User Profile Management:**
+   - Provide a profile screen where users can update personal information and app settings.
 
 ## Technical Requirements
 
 - **Technologies:**
-  - **React** (preferably with **TypeScript**)
-  - Use **React Hooks** and, if needed, a state management solution such as Context API or Redux.
-  - Integrate with a map API to display location data.
-  - Use Docker.
+  - **React Native** with React Navigation for routing.
+  - State management using Context API or Redux.
+  - Integration with native device capabilities (camera, push notifications).
+  - External APIs for authentication, chat, and notifications.
 
 - **Best Practices:**
-  - Write clean, modularized code.
-  - Use TypeScript properly for type safety.
-  - Create reusable and responsive components.
-  - Handle loading states and error management appropriately.
-  - (Optional, but desirable) Implement unit tests.
+  - Write clean, modularized, and reusable code.
+  - Ensure responsiveness and compatibility across iOS and Android platforms.
+  - Handle asynchronous operations, loading states, and error management gracefully.
+  - (Optional) Include unit tests for critical functionalities.
 
 - **Data:**
-  - You can simulate an API (using mocks) for the client CRUD operations or use a public API if appropriate.
-  - For the chat feature, a simple WebSocket implementation (or a library that simulates this behavior) is acceptable.
+  - Simulate or integrate with APIs for load management, chat, and authentication.
+  - Use mocks or public APIs where appropriate.
 
 ## Evaluation Criteria
 
-- **Functionality:** Does the app meet the minimum requirements (CRUD, chat, map integration, client segmentation)?
-- **Code Organization:** Is the project structure clear, and does the code adhere to best practices?
-- **Use of Technologies:** Does the candidate demonstrate proficiency in React, TypeScript, and integrating external APIs (for chat and maps)?
-- **UX/UI:** Is the user interface intuitive and responsive?
-- **Problem-Solving:** How effectively does the candidate handle asynchronous operations, error management, and state management?
+- **Functionality:** Does the app meet the functional requirements (authentication, loads management, camera integration, chat, notifications, profile management)?
+- **Code Quality:** Is the project well-organized and does the code adhere to best practices?
+- **Use of Technologies:** Does the candidate demonstrate proficiency in React Native, state management, and native device integration?
+- **User Experience:** Is the application intuitive, responsive, and user-friendly?
+- **Problem-Solving:** How effectively are asynchronous operations, error management, and cross-platform compatibility handled?
 
 ## Submission
 
-- Host your source code on a public repository (GitHub).
+- Host your source code on a public repository (e.g., GitHub).
 - Provide clear instructions on how to run the project.
 - (Optional) Include documentation explaining your technical decisions.
 
